@@ -1,0 +1,5 @@
+{
+  "name": "SimGemini: Arquitecto de Ciudades",
+  "description": "Una simulación profunda de construcción de ciudades donde gestionas recursos, zonas y consultas a un Planificador Urbano IA impulsado por Gemini.",
+  "requestFramePermissions": []
+}
