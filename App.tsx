@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { TileType, CityStats, AdvisorMessage } from './types';
 import { GRID_SIZE, TILE_DATA, INITIAL_STATS, TILE_SIZE, CATEGORIES } from './constants';
-import { getAdvisorFeedback } from './services/geminiService';
+import { getAdvisorFeedback } from './geminiService';
 
 const App: React.FC = () => {
   const [grid, setGrid] = useState<TileType[]>(() => 
