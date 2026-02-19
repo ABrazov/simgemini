@@ -156,5 +156,7 @@ export const INITIAL_STATS: CityStats = {
   demandR: 50,
   demandC: 30,
   demandI: 20,
-  level: 1
+  level: 1,
+  employed: 0,
+  workforce: 0
 };

@@ -257,6 +257,8 @@ const App: React.FC = () => {
           demandR: Math.max(0, Math.min(100, (jobs - pop) * 3 + 40)),
           demandC: Math.max(0, Math.min(100, (pop * 0.4 - jobs * 0.2) + 20)),
           demandI: Math.max(0, Math.min(100, (pop - jobs) + 10)),
+          employed: employed,
+          workforce: workforce,
         };
       });
     }, intervalTime);
@@ -453,6 +455,14 @@ const App: React.FC = () => {
           <div className="flex flex-col border-l border-slate-800 pl-4">
             <span className="text-[9px] text-blue-400 font-black uppercase">Población</span>
             <span className="text-lg font-mono text-blue-300">{stats.population.toLocaleString()}</span>
+          </div>
+
+          <div className="flex flex-col border-l border-slate-800 pl-4">
+            <span className="text-[9px] text-cyan-400 font-black uppercase">Trabajo / Paro</span>
+            <div className="flex items-baseline gap-2">
+              <span className="text-lg font-mono text-cyan-300" title="Empleados">{stats.employed.toLocaleString()}</span>
+              <span className="text-xs font-mono text-red-400" title="En paro">{(stats.workforce - stats.employed).toLocaleString()}</span>
+            </div>
           </div>
 
           <div className="flex flex-col border-l border-slate-800 pl-4">

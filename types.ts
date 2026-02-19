@@ -121,6 +121,8 @@ export interface CityStats {
   demandC: number;
   demandI: number;
   level: number;
+  employed: number;
+  workforce: number;
 }
 
 export interface AdvisorMessage {
