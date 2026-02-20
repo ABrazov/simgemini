@@ -9,7 +9,8 @@ export const CATEGORIES = {
     TileType.RESIDENTIAL_TRAILER, TileType.RESIDENTIAL_TINY, TileType.RESIDENTIAL, TileType.RESIDENTIAL_MODULAR,
     TileType.RESIDENTIAL_SUBURB, TileType.RESIDENTIAL_STUDENT, TileType.RESIDENTIAL_APARTMENTS, 
     TileType.RESIDENTIAL_GATED, TileType.RESIDENTIAL_HIGH, TileType.RESIDENTIAL_ECO, 
-    TileType.RESIDENTIAL_LUXURY, TileType.RESIDENTIAL_PENTHOUSE, TileType.RESIDENTIAL_ARCOLOGY
+    TileType.RESIDENTIAL_LUXURY, TileType.RESIDENTIAL_PENTHOUSE, TileType.RESIDENTIAL_ARCOLOGY,
+    TileType.RESIDENTIAL_SKY_CITY, TileType.RESIDENTIAL_DYSON_HABITAT, TileType.RESIDENTIAL_QUANTUM_MANSION, TileType.RESIDENTIAL_OMEGA_ARCOLOGY
   ],
   TRABAJO: [
     TileType.COMMERCIAL_STALL, TileType.COMMERCIAL_FASTFOOD, TileType.FARM, TileType.INDUSTRIAL_WORKSHOP,
@@ -17,26 +18,31 @@ export const CATEGORIES = {
     TileType.COMMERCIAL_OFFICE_SMALL, TileType.COMMERCIAL_CINEMA, TileType.COMMERCIAL_MALL, 
     TileType.INDUSTRIAL_HIGH, TileType.COMMERCIAL_HOTEL, TileType.OFFICE_TOWER, TileType.COMMERCIAL_HIGH, 
     TileType.INDUSTRIAL_CHEMICAL, TileType.TECH_CAMPUS, TileType.BIO_TECH_LAB, TileType.MEGA_CASINO,
-    TileType.INDUSTRIAL_DATA_CENTER, TileType.AUTOMATED_FACTORY, TileType.AEROSPACE_HANGAR
+    TileType.INDUSTRIAL_DATA_CENTER, TileType.AUTOMATED_FACTORY, TileType.AEROSPACE_HANGAR,
+    TileType.COMMERCIAL_INTERSTELLAR_EXCHANGE, TileType.COMMERCIAL_NEURAL_MARKET, TileType.COMMERCIAL_COSMIC_MALL,
+    TileType.INDUSTRIAL_NANO_FORGE, TileType.INDUSTRIAL_MATRIOSHKA_NODE, TileType.INDUSTRIAL_VOID_EXTRACTOR
   ],
   SERVICIOS: [
     TileType.ROAD, TileType.POWER_WIND, TileType.POWER_BIOMASS, TileType.POWER_PLANT, TileType.POWER_SOLAR, 
     TileType.POWER_GEOTHERMAL, TileType.WATER_PUMP, TileType.WATER_TOWER, TileType.POLICE_POST, TileType.POLICE, 
     TileType.FIRE_POST, TileType.FIRE_STATION, TileType.FIRST_AID, TileType.HOSPITAL_CLINIC,
     TileType.RECYCLING, TileType.POWER_PLANT_NUCLEAR, TileType.WATER_TREATMENT, TileType.FIRE_HQ,
-    TileType.POLICE_HQ, TileType.HOSPITAL, TileType.POWER_FUSION, TileType.DESALINATION_PLANT, TileType.MEGA_HOSPITAL
+    TileType.POLICE_HQ, TileType.HOSPITAL, TileType.POWER_FUSION, TileType.DESALINATION_PLANT, TileType.MEGA_HOSPITAL,
+    TileType.POWER_ANTIMATTER, TileType.POWER_ZERO_POINT, TileType.POWER_OMEGA_CORE
   ],
   CULTURA: [
     TileType.SCHOOL, TileType.LIBRARY, TileType.HIGH_SCHOOL, TileType.UNIVERSITY, TileType.MUSEUM, 
-    TileType.ART_GALLERY, TileType.RESEARCH_LAB, TileType.CULTURE_STATUE, TileType.CULTURE_OPERA, TileType.CULTURE_ZOO
+    TileType.ART_GALLERY, TileType.RESEARCH_LAB, TileType.CULTURE_STATUE, TileType.CULTURE_OPERA, TileType.CULTURE_ZOO,
+    TileType.CULTURE_GALACTIC_MUSEUM, TileType.CULTURE_UNIVERSAL_LIBRARY
   ],
   OCIO: [
     TileType.PARK_SMALL, TileType.LEISURE_SKATEPARK, TileType.DOG_PARK, TileType.LEISURE_POOL, 
-    TileType.PARK_LARGE, TileType.LEISURE_BOTANICAL, TileType.STADIUM, TileType.THEME_PARK, TileType.VR_PLAZA
+    TileType.PARK_LARGE, TileType.LEISURE_BOTANICAL, TileType.STADIUM, TileType.THEME_PARK, TileType.VR_PLAZA,
+    TileType.LEISURE_GRAVITY_PARK, TileType.LEISURE_VIRTUAL_REALM
   ],
   TRANSPORTE: [
     TileType.TRANSPORT_BUS, TileType.SUBWAY, TileType.TRANSPORT_HELIPORT, TileType.AIRPORT, 
-    TileType.MAGLEV_STATION, TileType.SPACE_PORT
+    TileType.MAGLEV_STATION, TileType.SPACE_PORT, TileType.TRANSPORT_TELEPORT_HUB, TileType.TRANSPORT_WORMHOLE_STATION
   ]
 };
 
@@ -58,6 +64,10 @@ export const TILE_DATA: Record<TileType, any> = {
   [TileType.RESIDENTIAL_LUXURY]: { name: 'Torre Lujo', cost: 6000, power: 50, water: 25, income: 1000, color: '#064e3b', icon: '💎', pop: 600, jobs: 0, pol: 0, unlockLevel: 8 },
   [TileType.RESIDENTIAL_PENTHOUSE]: { name: 'Áticos Élite', cost: 15000, power: 80, water: 40, income: 2500, color: '#022c22', icon: '🥂', pop: 800, jobs: 0, pol: 0, unlockLevel: 10 },
   [TileType.RESIDENTIAL_ARCOLOGY]: { name: 'Arcología', cost: 100000, power: 200, water: 100, income: 10000, color: '#0f172a', icon: '🪐', pop: 5000, jobs: 0, pol: -20, unlockLevel: 15 },
+  [TileType.RESIDENTIAL_SKY_CITY]: { name: 'Ciudad Nube', cost: 250000, power: 500, water: 200, income: 25000, color: '#38bdf8', icon: '☁️', pop: 12000, jobs: 0, pol: -50, unlockLevel: 35 },
+  [TileType.RESIDENTIAL_DYSON_HABITAT]: { name: 'Hab. Dyson', cost: 1000000, power: 1000, water: 500, income: 100000, color: '#fcd34d', icon: '🛰️', pop: 50000, jobs: 0, pol: 0, unlockLevel: 50 },
+  [TileType.RESIDENTIAL_QUANTUM_MANSION]: { name: 'Mansión Cuántica', cost: 5000000, power: 2000, water: 1000, income: 500000, color: '#a855f7', icon: '🌌', pop: 150000, jobs: 0, pol: 0, unlockLevel: 75 },
+  [TileType.RESIDENTIAL_OMEGA_ARCOLOGY]: { name: 'Arcología Omega', cost: 25000000, power: 5000, water: 2000, income: 2000000, color: '#000000', icon: '♾️', pop: 1000000, jobs: 0, pol: -100, unlockLevel: 99 },
 
   // TRABAJO
   [TileType.COMMERCIAL_STALL]: { name: 'Puesto Callejero', cost: 30, power: 1, water: 1, income: 15, color: '#60a5fa', icon: '🌭', pop: 0, jobs: 2, pol: 1, unlockLevel: 1 },
@@ -79,9 +89,15 @@ export const TILE_DATA: Record<TileType, any> = {
   [TileType.TECH_CAMPUS]: { name: 'Campus Tech', cost: 35000, power: 500, water: 150, income: 15000, color: '#1e3a8a', icon: '💻', pop: 0, jobs: 1200, pol: 0, unlockLevel: 10 },
   [TileType.BIO_TECH_LAB]: { name: 'Lab Bio-Tech', cost: 45000, power: 300, water: 200, income: 20000, color: '#065f46', icon: '🧬', pop: 0, jobs: 500, pol: 5, unlockLevel: 11 },
   [TileType.MEGA_CASINO]: { name: 'Mega Casino', cost: 65000, power: 800, water: 400, income: 45000, color: '#7e22ce', icon: '🎰', pop: 0, jobs: 1500, pol: 20, unlockLevel: 12 },
+  [TileType.COMMERCIAL_INTERSTELLAR_EXCHANGE]: { name: 'Bolsa Estelar', cost: 200000, power: 1000, water: 300, income: 80000, color: '#1e40af', icon: '💹', pop: 0, jobs: 5000, pol: 5, unlockLevel: 40 },
+  [TileType.COMMERCIAL_NEURAL_MARKET]: { name: 'Mercado Neural', cost: 800000, power: 2500, water: 500, income: 250000, color: '#06b6d4', icon: '🧠', pop: 0, jobs: 15000, pol: 0, unlockLevel: 60 },
+  [TileType.COMMERCIAL_COSMIC_MALL]: { name: 'Mall Cósmico', cost: 3000000, power: 6000, water: 1500, income: 1000000, color: '#ec4899', icon: '🌠', pop: 0, jobs: 50000, pol: 10, unlockLevel: 85 },
   [TileType.INDUSTRIAL_DATA_CENTER]: { name: 'Centro Datos', cost: 80000, power: 2000, water: 500, income: 35000, color: '#0f172a', icon: '🖥️', pop: 0, jobs: 100, pol: 1, unlockLevel: 13 },
   [TileType.AUTOMATED_FACTORY]: { name: 'Fábrica AI', cost: 120000, power: 1500, water: 200, income: 60000, color: '#111827', icon: '🤖', pop: 0, jobs: 200, pol: 2, unlockLevel: 15 },
   [TileType.AEROSPACE_HANGAR]: { name: 'Aeroespacial', cost: 250000, power: 3000, water: 1000, income: 150000, color: '#1e293b', icon: '🚀', pop: 0, jobs: 3000, pol: 15, unlockLevel: 20 },
+  [TileType.INDUSTRIAL_NANO_FORGE]: { name: 'Nano Forja', cost: 500000, power: 4000, water: 1000, income: 300000, color: '#475569', icon: '🔬', pop: 0, jobs: 8000, pol: 5, unlockLevel: 45 },
+  [TileType.INDUSTRIAL_MATRIOSHKA_NODE]: { name: 'Nodo Matrioshka', cost: 2000000, power: 10000, water: 2000, income: 1200000, color: '#111827', icon: '🖲️', pop: 0, jobs: 25000, pol: 2, unlockLevel: 65 },
+  [TileType.INDUSTRIAL_VOID_EXTRACTOR]: { name: 'Extr. de Vacío', cost: 10000000, power: 25000, water: 5000, income: 5000000, color: '#020617', icon: '🕳️', pop: 0, jobs: 100000, pol: 0, unlockLevel: 90 },
 
   // SERVICIOS
   [TileType.POWER_WIND]: { name: 'Aerogenerador', cost: 800, power: -40, water: 0, income: -20, color: '#94a3b8', icon: '🌬️', pol: 0, unlockLevel: 1 },
@@ -105,6 +121,9 @@ export const TILE_DATA: Record<TileType, any> = {
   [TileType.HOSPITAL]: { name: 'Hospital Gral.', cost: 30000, power: 250, water: 250, income: -5000, color: '#f1f5f9', icon: '🏩', health: 60, unlockLevel: 11 },
   [TileType.MEGA_HOSPITAL]: { name: 'Ctro. Médico AI', cost: 100000, power: 1000, water: 800, income: -15000, color: '#ffffff', icon: '🏥', health: 150, unlockLevel: 15 },
   [TileType.POWER_FUSION]: { name: 'N. Fusión', cost: 500000, power: -50000, water: 2000, income: -25000, color: '#3b82f6', icon: '⚛️', pol: 0, unlockLevel: 25 },
+  [TileType.POWER_ANTIMATTER]: { name: 'Antimateria', cost: 2000000, power: -250000, water: 5000, income: -100000, color: '#7c3aed', icon: '💥', pol: 5, unlockLevel: 40 },
+  [TileType.POWER_ZERO_POINT]: { name: 'Punto Cero', cost: 10000000, power: -1000000, water: 10000, income: -500000, color: '#2dd4bf', icon: '🌀', pol: 0, unlockLevel: 70 },
+  [TileType.POWER_OMEGA_CORE]: { name: 'Núcleo Omega', cost: 50000000, power: -10000000, water: 50000, income: -2000000, color: '#000000', icon: '💠', pol: 0, unlockLevel: 99 },
   [TileType.DESALINATION_PLANT]: { name: 'Desaladora', cost: 60000, power: 800, water: -8000, income: -6000, color: '#0369a1', icon: '🌊', pol: 5, unlockLevel: 12 },
 
   // CULTURA
@@ -117,6 +136,8 @@ export const TILE_DATA: Record<TileType, any> = {
   [TileType.ART_GALLERY]: { name: 'Galería Arte', cost: 18000, power: 80, water: 40, income: -1000, color: '#a78bfa', icon: '🖼️', happy: 25, edu: 8, unlockLevel: 7 },
   [TileType.CULTURE_OPERA]: { name: 'Ópera Real', cost: 60000, power: 400, water: 200, income: -5000, color: '#4c1d95', icon: '🎭', happy: 60, unlockLevel: 12 },
   [TileType.CULTURE_ZOO]: { name: 'Zoo Municipal', cost: 45000, power: 200, water: 1000, income: -4000, color: '#365314', icon: '🦁', happy: 50, edu: 10, unlockLevel: 10 },
+  [TileType.CULTURE_GALACTIC_MUSEUM]: { name: 'Museo Galáctico', cost: 300000, power: 1000, water: 500, income: -15000, color: '#4338ca', icon: '🏛️', happy: 150, edu: 100, unlockLevel: 55 },
+  [TileType.CULTURE_UNIVERSAL_LIBRARY]: { name: 'Bibl. Universal', cost: 1500000, power: 5000, water: 1000, income: -50000, color: '#1e1b4b', icon: '📚', happy: 300, edu: 500, unlockLevel: 80 },
   [TileType.RESEARCH_LAB]: { name: 'Ctro. I+D Tech', cost: 120000, power: 1500, water: 500, income: -20000, color: '#1e40af', icon: '🧪', edu: 250, unlockLevel: 16 },
 
   // OCIO
@@ -129,6 +150,8 @@ export const TILE_DATA: Record<TileType, any> = {
   [TileType.STADIUM]: { name: 'Estadio', cost: 50000, power: 800, water: 600, income: 6000, color: '#fb923c', icon: '🏟️', happy: 80, unlockLevel: 10 },
   [TileType.THEME_PARK]: { name: 'P. Atracciones', cost: 150000, power: 2000, water: 1200, income: 25000, color: '#f472b6', icon: '🎡', happy: 150, unlockLevel: 15 },
   [TileType.VR_PLAZA]: { name: 'Plaza Virtual', cost: 250000, power: 4000, water: 200, income: -5000, color: '#2dd4bf', icon: '🕶️', happy: 300, unlockLevel: 20 },
+  [TileType.LEISURE_GRAVITY_PARK]: { name: 'P. Gravedad 0', cost: 150000, power: 500, water: 100, income: -10000, color: '#0ea5e9', icon: '🛸', happy: 100, unlockLevel: 35 },
+  [TileType.LEISURE_VIRTUAL_REALM]: { name: 'Reino Virtual', cost: 1000000, power: 8000, water: 500, income: -30000, color: '#8b5cf6', icon: '🎮', happy: 500, unlockLevel: 60 },
 
   // TRANSPORTE
   [TileType.TRANSPORT_BUS]: { name: 'Terminal Bus', cost: 2000, power: 10, water: 5, income: -600, color: '#facc15', icon: '🚌', happy: 15, unlockLevel: 2 },
@@ -137,6 +160,8 @@ export const TILE_DATA: Record<TileType, any> = {
   [TileType.AIRPORT]: { name: 'Aero. Internac.', cost: 120000, power: 2000, water: 1500, income: 45000, color: '#1e293b', icon: '✈️', jobs: 2000, pol: 200, unlockLevel: 14 },
   [TileType.MAGLEV_STATION]: { name: 'Estación Maglev', cost: 250000, power: 3000, water: 300, income: 20000, color: '#312e81', icon: '🚄', happy: 100, unlockLevel: 18 },
   [TileType.SPACE_PORT]: { name: 'Puerto Espacial', cost: 1000000, power: 20000, water: 10000, income: 500000, color: '#000000', icon: '☄️', jobs: 10000, pol: 500, unlockLevel: 30 },
+  [TileType.TRANSPORT_TELEPORT_HUB]: { name: 'Teletransporte', cost: 500000, power: 10000, water: 500, income: -20000, color: '#22d3ee', icon: '🌀', happy: 150, unlockLevel: 50 },
+  [TileType.TRANSPORT_WORMHOLE_STATION]: { name: 'Est. Agujero Gus.', cost: 5000000, power: 100000, water: 5000, income: 1000000, color: '#000000', icon: '🕳️', happy: 500, unlockLevel: 95 },
 };
 
 export const INITIAL_STATS: CityStats = {

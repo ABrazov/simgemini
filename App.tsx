@@ -4,7 +4,14 @@ import { TileType, CityStats, AdvisorMessage } from './types';
 import { GRID_SIZE, TILE_DATA, INITIAL_STATS, TILE_SIZE, CATEGORIES } from './constants';
 import { getAdvisorFeedback } from './geminiService';
 
-const LEVEL_THRESHOLDS = [100, 200, 300, 500, 750, 1000, 1200, 1500, 1800, 2000, 2500, 3000, 4000];
+const LEVEL_THRESHOLDS = [
+  100, 250, 500, 750, 1000, 1500, 2000, 2500, 3000, 4000, 5000, 6500, 8000, 10000, 12500, 15000, 18000, 22000, 26000, 30000,
+  35000, 40000, 46000, 52000, 60000, 68000, 76000, 85000, 95000, 105000, 115000, 130000, 145000, 160000, 180000, 200000, 225000, 250000, 280000, 310000,
+  350000, 390000, 430000, 480000, 530000, 580000, 640000, 700000, 770000, 850000, 930000, 1020000, 1120000, 1230000, 1350000, 1480000, 1620000, 1770000, 1930000, 2100000,
+  2300000, 2500000, 2750000, 3000000, 3300000, 3600000, 4000000, 4400000, 4800000, 5300000, 5800000, 6400000, 7000000, 7700000, 8500000, 9400000, 10400000, 11500000, 12700000, 14000000,
+  15500000, 17100000, 18900000, 20900000, 23100000, 25500000, 28200000, 31200000, 34500000, 38100000, 42100000, 46500000, 51400000, 56800000, 62800000, 69400000, 76700000, 84800000
+];
+
 
 const REFRESH_OPTIONS = [
   { label: '2s', value: 2000 },
@@ -47,6 +54,28 @@ const App: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const isDragging = useRef(false);
   const lastMousePos = useRef({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const step = 40 / camera.zoom;
+      switch (e.key) {
+        case 'ArrowUp':
+          setCamera(prev => ({ ...prev, y: prev.y + step }));
+          break;
+        case 'ArrowDown':
+          setCamera(prev => ({ ...prev, y: prev.y - step }));
+          break;
+        case 'ArrowLeft':
+          setCamera(prev => ({ ...prev, x: prev.x + step }));
+          break;
+        case 'ArrowRight':
+          setCamera(prev => ({ ...prev, x: prev.x - step }));
+          break;
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [camera.zoom]);
 
   // Audio Context y Synth para música
   const audioCtxRef = useRef<AudioContext | null>(null);
